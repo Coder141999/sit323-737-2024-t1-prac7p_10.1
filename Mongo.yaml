@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongoDB
+spec:
+  selector:
+    matchLabels:
+      app: mongoDB
+  template:
+    metadata:
+      labels:
+        app: mongoDB
+    spec:
+      containers:
+      - name: mongoDB
+        image: mongoDB
